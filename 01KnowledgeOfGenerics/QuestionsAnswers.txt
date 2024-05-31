@@ -1,0 +1,35 @@
+1. Describe the problem generics address.
+	* The compiler performs type checking at compile time for generics. This ensures that every operation done
+		on the object or method has the correct parameter types. If not, then an error will exist and the program
+		will not run. The problems will appear during compile-time instead of runtime, which makes the debugging process easier.
+	* Generics reduce redundancy in code by allowing the same method or class to operate on different data types.
+		This reduces the need to create multiple methods or classes that perform the same operations with different parameter types.
+	* Generics eliminate the need for boxing and unboxing by allowing value types to be used directly in collections and methods without
+		having to convert elements between object and the declared type.
+2. How would you create a list of strings, using the generic List class?
+	* List<string> stringList = new();
+3. How many generic type parameters does the Dictionary class have?
+	* The Dictionary class has 2 generic type parameters. The first parameter type is the type of the key
+		in the dictionary, and the second parameter type is the type of the value in the dictionary.
+4. True/False. When a generic class has multiple type parameters, they must all match.
+	* False. 
+	* When you have multiple type parameters, and you want them to be the same type, you can declare them with the same generic type parameters (i.e., <T, T>).
+	* When you have multiple type parameters, and you want them to be different types, you can declare them with different generic type parameters (i.e., <K, V>).
+5. What method is used to add items to a List object?
+	* The Add method adds elements into a List object.
+6. Name two methods that cause items to be removed from a List.
+	* Remove and RemoveAt removes items from a list.
+	* Remove takes in an object of the type that the List is storing and looks over the list to find the item to remove.
+	* RemoveAt takes in an integer value and removes the item stored in the list at the specified index.
+7. How do you indicate that a class has a generic type parameter?
+	* You set the generic type parameters right after the class name declaration.
+		* e.g., public class GenericClassName<T> {}
+8. True/False. Generic classes can only have one generic type parameter.
+	* False. You can have one or more generic type parameters.
+9. True/False. Generic type constraints limit what can be used for the generic type.
+	* True. You can use the where keyword to specify the constraints and limit what the generic type can be.
+		* e.g., public class GenericClassName<T> where T : class {} enforces the rule that T must be a reference type.
+		* e.g., public class GenericClassName<T> where T : BaseClass {} enforces the rule that T must be a type of BaseClass.
+10. True/False. Constraints let you use the methods of the thing you are constraining to.
+	* True. Through using constraints, it ensures that the generic type is of the type that is being constrained to, so the 
+		methods of the constrained type is usable.
