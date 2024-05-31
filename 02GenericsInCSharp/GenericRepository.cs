@@ -51,7 +51,8 @@
                 bool inserted = false;
                 for (int i = 0; i < mockedDB.Count; i++)
                 {
-                    if (mockedDB[i].Id > item.Id)
+                    if (mockedDB[i].Id == item.Id) continue;
+                    else if (mockedDB[i].Id > item.Id)
                     {
                         mockedDB.Insert(i, item);
                         inserted = true;
