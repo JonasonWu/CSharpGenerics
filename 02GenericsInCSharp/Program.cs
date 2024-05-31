@@ -1,4 +1,4 @@
-﻿namespace _02GenericsInCSharp
+﻿namespace Assignment4
 {
     internal class Program
     {
