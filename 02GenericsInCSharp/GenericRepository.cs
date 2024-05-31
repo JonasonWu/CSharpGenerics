@@ -49,9 +49,13 @@
             foreach (T item in temporaryList)
             {
                 bool inserted = false;
-                for (int i = 0; i < mockedDB.Count; i++)
+                for (int i = 0; !inserted && i < mockedDB.Count; i++)
                 {
-                    if (mockedDB[i].Id == item.Id) continue;
+                    if (mockedDB[i].Id == item.Id)
+                    {
+                        mockedDB[i] = item;
+                        inserted = true;
+                    }
                     else if (mockedDB[i].Id > item.Id)
                     {
                         mockedDB.Insert(i, item);
